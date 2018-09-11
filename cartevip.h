@@ -14,8 +14,12 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QMessageBox>
+#include <QSizePolicy>
 #include <QDesktopWidget>
 #include <QApplication>
+#include <QHeaderView>
+#include <QModelIndexList>
+#include <QModelIndex>
 
 #include <QDebug>
 
@@ -44,9 +48,16 @@ private:
     QPushButton *m_pPushButtonSearchVIPCard;
     QPushButton *m_pPushButtonConfirmedVIPCard;
 
-    //The widget of showing the VIP card
+    //The widget of showing the VIP card, second page
     QWidget *m_pWidgetShowVIPCard;
     QLabel *m_pLabelShowVIPCard;
+    QLabel *m_pLabelShowCustomerName;
+    QLabel *m_pLabelShowCustomerRef;
+    QLabel *m_pLabelShowCustomerTel;
+    QPushButton *m_pPushButtonBalance;
+    QPushButton *m_pPushButtonCreditAmount;
+    QPushButton *m_pPushButtonTotal;
+    QPushButton *m_pPushButtonPoint;
 
     //Layout
     QStackedWidget *m_pStackedWidget;
@@ -57,6 +68,10 @@ private:
 
     //The infos of the VIP card
     QString m_sCardID;
+    QString m_sCustomerName;
+    QString m_sCustomerRef;
+    QString m_sCustomerTel;
+    double m_dCardBalance;
     double m_dCardCreditAmount;
 
 
